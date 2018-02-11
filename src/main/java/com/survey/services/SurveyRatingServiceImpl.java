@@ -67,19 +67,7 @@ public class SurveyRatingServiceImpl implements SurveyRatingService{
 	}
 	@Override
 	public Integer getAvgRatingBySurveyAspect(SurveyAspect surveyAspect) {
-		/*return 0;
-		List<SurveyRating> surveyRatingList = new ArrayList<>();
-		Query query = new Query();
-		String surveyAspectId =  surveyAspect.get_id();
-		query.addCriteria(Criteria
-				.where("surveyAspect.$id").is(new ObjectId(surveyAspectId)));
-		query.with(new Sort(Sort.Direction.DESC,"createdDate"));
 		
-	    System.out.println(query.toString());
-	    mongoOperation.find(query, SurveyRating.class).forEach(surveyRatingList::add); 
-	    return surveyRatingList;
-	    
-	    */
 		String surveyAspectId =  surveyAspect.get_id();
 		Aggregation agg = Aggregation.newAggregation(
                 Aggregation.match(Criteria.where("surveyAspect.$id").is(new ObjectId(surveyAspectId)))
