@@ -11,8 +11,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.survey.model.SurveyAspect;
-import com.survey.model.SurveyRating;
+import com.survey.mongo.model.SurveyAspect;
+import com.survey.mongo.model.SurveyRating;
 import com.survey.services.SurveyAspectService;
 import com.survey.services.SurveyRatingService;
 

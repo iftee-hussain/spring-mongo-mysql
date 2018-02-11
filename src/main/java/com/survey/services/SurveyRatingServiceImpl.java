@@ -13,8 +13,9 @@ import org.springframework.data.mongodb.core.aggregation.AggregationResults;
 import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.stereotype.Service;
-import com.survey.model.SurveyAspect;
-import com.survey.model.SurveyRating;
+
+import com.survey.mongo.model.SurveyAspect;
+import com.survey.mongo.model.SurveyRating;
 import com.survey.repositories.SurveyRatingrepository;
 
 @Service

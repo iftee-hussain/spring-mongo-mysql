@@ -9,7 +9,7 @@ import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.stereotype.Service;
 
-import com.survey.model.SurveyCategory;
+import com.survey.mongo.model.SurveyCategory;
 import com.survey.repositories.SurveyCategoryRepository;
 
 @Service

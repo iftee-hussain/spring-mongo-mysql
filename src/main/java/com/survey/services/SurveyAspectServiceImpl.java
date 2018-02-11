@@ -10,8 +10,8 @@ import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.stereotype.Service;
 
-import com.survey.model.SurveyAspect;
-import com.survey.model.SurveyCategory;
+import com.survey.mongo.model.SurveyAspect;
+import com.survey.mongo.model.SurveyCategory;
 import com.survey.repositories.SurveyAspectRepository;
 @Service
 public class SurveyAspectServiceImpl implements SurveyAspectService{

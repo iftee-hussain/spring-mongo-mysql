@@ -4,8 +4,8 @@ import java.util.List;
 
 import org.springframework.data.mongodb.repository.Query;
 
-import com.survey.model.SurveyAspect;
-import com.survey.model.SurveyCategory;
+import com.survey.mongo.model.SurveyAspect;
+import com.survey.mongo.model.SurveyCategory;
 
 public interface SurveyAspectService {
 	List<SurveyAspect> findAll();
