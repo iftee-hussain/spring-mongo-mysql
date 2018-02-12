@@ -11,26 +11,24 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.survey.mongo.model.SurveyAspect;
-import com.survey.mongo.model.SurveyRating;
+import com.survey.model.SurveyAspect;
+import com.survey.model.SurveyRating;
 import com.survey.services.SurveyAspectService;
 import com.survey.services.SurveyRatingService;
 
 @RestController
 public class SurveyRatingController {
 
+	@Autowired
 	private SurveyRatingService surveyRatingService;
+	
+	@Autowired
 	private SurveyAspectService surveyAspectService;
 	
-	  @Autowired
-	    public void setSurveyRatingService(SurveyRatingService surveyRatingService) {
-	        this.surveyRatingService = surveyRatingService;
-	  }
-	  @Autowired
-	    public void setSurveyAspectService(SurveyAspectService surveyAspectService) {
-	        this.surveyAspectService = surveyAspectService;
-	  }
-	
+	 /**
+	  * This method returns all ratings
+	  * @return
+	  */
 	 @RequestMapping(method=RequestMethod.GET, value="/ratings")
 	    public Iterable<SurveyRating> surveyRating() {
 	        return surveyRatingService.findAll();

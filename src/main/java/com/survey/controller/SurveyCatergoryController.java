@@ -14,19 +14,16 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.survey.mongo.model.SurveyCategory;
+import com.survey.model.SurveyCategory;
 import com.survey.services.SurveyCategoryService;
 
 @RestController
 public class SurveyCatergoryController {
 	
-	
+	@Autowired
 	private SurveyCategoryService surveyCategoryService;
 	
-	  @Autowired
-	    public void setSurveyCategoryService(SurveyCategoryService surveyCategoryService) {
-	        this.surveyCategoryService = surveyCategoryService;
-	  }
+	  
 	/**
 	 * This function returns all the categories and subcategories upto aspects from a single document surveyCategory
 	 * @return

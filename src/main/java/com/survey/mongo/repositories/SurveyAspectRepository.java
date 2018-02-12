@@ -1,11 +1,11 @@
-package com.survey.repositories;
+package com.survey.mongo.repositories;
 
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.data.repository.CrudRepository;
+import com.survey.model.SurveyAspect;
+import org.springframework.stereotype.Repository;
 
-import com.survey.mongo.model.SurveyAspect;
-
-
+@Repository
 public interface SurveyAspectRepository extends MongoRepository<SurveyAspect, String>{
 
 }

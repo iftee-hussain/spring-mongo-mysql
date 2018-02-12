@@ -1,9 +1,10 @@
-package com.survey.repositories;
+package com.survey.mongo.repositories;
 
 import org.springframework.data.mongodb.repository.MongoRepository;
+import com.survey.model.SurveyRating;
+import org.springframework.stereotype.Repository;
 
-import com.survey.mongo.model.SurveyRating;
-
+@Repository
 public interface SurveyRatingrepository extends MongoRepository<SurveyRating, String>{
 
 }

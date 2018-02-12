@@ -10,27 +10,21 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.survey.mongo.model.SurveyAspect;
-import com.survey.mongo.model.SurveyCategory;
-import com.survey.mongo.model.SurveyRating;
+import com.survey.model.SurveyAspect;
+import com.survey.model.SurveyCategory;
 import com.survey.services.SurveyAspectService;
 import com.survey.services.SurveyCategoryService;
 
 @RestController
 public class SurveyAspectController {
 	
+	@Autowired
 	private SurveyAspectService surveyAspectService;
+	
+	@Autowired
 	private SurveyCategoryService surveyCategoryService;
 	
-	@Autowired
-    public void setSurveyAspectService(SurveyAspectService surveyAspectService) {
-        this.surveyAspectService = surveyAspectService;
-	}
 	
-	@Autowired
-    public void setSurveyCategoryService(SurveyCategoryService surveyCategoryService) {
-        this.surveyCategoryService = surveyCategoryService;
-	}
 	/**
 	 * This method return all the aspects
 	 * @return

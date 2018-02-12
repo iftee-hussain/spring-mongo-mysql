@@ -10,19 +10,17 @@ import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.stereotype.Service;
 
-import com.survey.mongo.model.SurveyAspect;
-import com.survey.mongo.model.SurveyCategory;
-import com.survey.repositories.SurveyAspectRepository;
+import com.survey.model.SurveyAspect;
+import com.survey.model.SurveyCategory;
+import com.survey.mongo.repositories.SurveyAspectRepository;
 @Service
 public class SurveyAspectServiceImpl implements SurveyAspectService{
-	private SurveyAspectRepository surveyAspectRepository;
-    private MongoOperations mongoOperation;
 	
-    @Autowired
-	public SurveyAspectServiceImpl(SurveyAspectRepository surveyAspectRepository, MongoOperations mongoOperation) {
-		this.surveyAspectRepository = surveyAspectRepository;
-		this.mongoOperation = mongoOperation;
-	}
+	@Autowired
+	private SurveyAspectRepository surveyAspectRepository;
+	
+	@Autowired
+    private MongoOperations mongoOperation;
 
 	@Override
 	public List<SurveyAspect> findAll() {

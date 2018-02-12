@@ -1,9 +1,10 @@
-package com.survey.repositories;
+package com.survey.mongo.repositories;
 
 import org.springframework.data.repository.CrudRepository;
+import com.survey.model.SurveyCategory;
+import org.springframework.stereotype.Repository;
 
-import com.survey.mongo.model.SurveyCategory;
-
+@Repository
 public interface SurveyCategoryRepository extends CrudRepository<SurveyCategory, String>{
 
 }

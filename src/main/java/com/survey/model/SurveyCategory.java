@@ -1,4 +1,4 @@
-package com.survey.mongo.model;
+package com.survey.model;
 
 import org.bson.types.ObjectId;
 import org.springframework.data.annotation.Id;

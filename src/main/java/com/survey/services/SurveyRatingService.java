@@ -2,8 +2,8 @@ package com.survey.services;
 
 import java.util.List;
 
-import com.survey.mongo.model.SurveyAspect;
-import com.survey.mongo.model.SurveyRating;
+import com.survey.model.SurveyAspect;
+import com.survey.model.SurveyRating;
 
 public interface SurveyRatingService {
 	List<SurveyRating> findAll();

@@ -14,21 +14,20 @@ import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.stereotype.Service;
 
-import com.survey.mongo.model.SurveyAspect;
-import com.survey.mongo.model.SurveyRating;
-import com.survey.repositories.SurveyRatingrepository;
+import com.survey.model.SurveyAspect;
+import com.survey.model.SurveyRating;
+import com.survey.mongo.repositories.SurveyRatingrepository;
 
 @Service
 public class SurveyRatingServiceImpl implements SurveyRatingService{
+	
+	@Autowired
 	private SurveyRatingrepository surveyRatingrepository;
+	
+	@Autowired
 	private MongoOperations mongoOperation;
     
-   @Autowired
-    public SurveyRatingServiceImpl(SurveyRatingrepository surveyRatingrepository, MongoOperations mongoOperation) {
-        this.surveyRatingrepository = surveyRatingrepository;
-        this.mongoOperation = mongoOperation;
-       
-    }
+   
 	@Override
 	public List<SurveyRating> findAll() {
 		List<SurveyRating> surveyratingsArray = new ArrayList<>();

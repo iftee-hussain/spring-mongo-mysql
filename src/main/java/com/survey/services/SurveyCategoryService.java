@@ -4,7 +4,7 @@ import java.util.List;
 
 import org.springframework.stereotype.Service;
 
-import com.survey.mongo.model.SurveyCategory;
+import com.survey.model.SurveyCategory;
 
 @Service
 public interface SurveyCategoryService {

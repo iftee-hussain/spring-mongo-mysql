@@ -1,4 +1,4 @@
-package com.survey.mongo.model;
+package com.survey.model;
 
 import java.util.Date;
 

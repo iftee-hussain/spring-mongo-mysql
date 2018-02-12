@@ -9,21 +9,19 @@ import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.stereotype.Service;
 
-import com.survey.mongo.model.SurveyCategory;
-import com.survey.repositories.SurveyCategoryRepository;
+import com.survey.model.SurveyCategory;
+import com.survey.mongo.repositories.SurveyCategoryRepository;
 
 @Service
 public class SurveyCategoryServiceImpl implements SurveyCategoryService{
 	
+	@Autowired
 	private SurveyCategoryRepository surveyCategoryRepository;
+	
+	@Autowired
 	private MongoOperations mongoOperation;
     
-   @Autowired
-    public SurveyCategoryServiceImpl(SurveyCategoryRepository surveyCategoryRepository, MongoOperations mongoOperation) {
-        this.surveyCategoryRepository = surveyCategoryRepository;
-        this.mongoOperation = mongoOperation;
-       
-    }
+   
 
 	@Override
 	public List<SurveyCategory> findAll() {
