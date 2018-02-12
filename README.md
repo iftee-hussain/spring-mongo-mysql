@@ -7,7 +7,7 @@
 ### Usage
 - Run mongodb and mysql
 - Run the application and go on http://localhost:8080/
-- Use routes and json provided in Ccontroller files
+- Use routes and json provided in Controller files
 
 ### Build and run
 
